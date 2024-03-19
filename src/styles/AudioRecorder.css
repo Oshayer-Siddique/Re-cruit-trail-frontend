@@ -1,0 +1,37 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .main-container {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .btn-style {
+    margin-top: 20px;
+  }
+  
+  .btn-style button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-style button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -4,7 +4,8 @@ import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import About from './Components/About';
 import Alert from './Components/Alert';
-import Recorder from './Components/Recorder';
+import AudioRecorder from './Components/AudioRecorder';
+import VoiceRecorder from './Components/VoiceRecorder';
 import React, { useState } from 'react';
 
 import {
@@ -44,8 +45,10 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
+
             <Route path="/">
-              <Recorder></Recorder>
+              <AudioRecorder></AudioRecorder>
+              <VoiceRecorder></VoiceRecorder>
             </Route>
           </Switch>
         </div>

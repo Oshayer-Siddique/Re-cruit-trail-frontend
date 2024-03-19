@@ -1,0 +1,30 @@
+.recorder-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .recorder-container h2 {
+    color: #333;
+  }
+  
+  .recorder-controls {
+    margin-top: 20px;
+  }
+  
+  .recorder-controls button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .recorder-controls button:hover {
+    background-color: #0056b3;
+  }
+  
