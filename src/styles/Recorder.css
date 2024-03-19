@@ -1,0 +1,36 @@
+.recorder-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .record-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .record-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .record-button.recording {
+    background-color: #dc3545;
+  }
+  
+  audio {
+    margin-top: 20px;
+    width: 100%;
+  }
+  

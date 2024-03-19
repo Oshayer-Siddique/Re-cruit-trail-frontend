@@ -21,9 +21,9 @@ export default function TextForm(props) {
     
     return (
         <>
-        <div className='container' style={{color: props.mood == '#0a335c'?'white':'black'}}>
+        <div className='container' style={{color: props.mood === '#0a335c'?'white':'black'}}>
             <form>
-                <div className="form-group" style={{backgroundColor: props.mood == '#0a335c'?'white':'dark'}}  >
+                <div className="form-group" style={{backgroundColor: props.mood === '#0a335c'?'white':'dark'}}  >
                     <label for="exampleFormControlInput1"><h2>{props.email}</h2></label>
                     <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
                 </div>

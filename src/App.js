@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
 import About from './Components/About';
 import Alert from './Components/Alert';
+import Recorder from './Components/Recorder';
 import React, { useState } from 'react';
 
 import {
@@ -14,14 +15,14 @@ import {
 } from "react-router-dom";
 
 
-let name = "Oshayer"
+//let name = "Oshayer"
 
 function App() {
 
   const [mode, setMode] = useState('dark');
 
   const toggleMode = () => {
-    if (mode == 'light') {
+    if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#0a335c';
     }
@@ -36,7 +37,7 @@ function App() {
 
     <Router>
       <div>
-        <Navbar title="TEXTDATA" about="ABOUT US" mode={mode} togglemode={toggleMode} />
+        <Navbar title="Momentum" about="ABOUT US" mode={mode} togglemode={toggleMode} />
         <Alert />
         <div className="container">
           <Switch>
@@ -44,13 +45,14 @@ function App() {
               <About />
             </Route>
             <Route path="/">
-              <TextForm email="EMAIL ADDRESS" mode={mode} />
+              <Recorder></Recorder>
             </Route>
           </Switch>
         </div>
       </div>
     </Router>
 
+ 
 
 
 
