@@ -6,6 +6,9 @@ import About from './Components/About';
 import Alert from './Components/Alert';
 import AudioRecorder from './Components/AudioRecorder';
 import VoiceRecorder from './Components/VoiceRecorder';
+import GreetingForm from './Components/GreetingForm';
+import AudioFileUpload from './Components/AudioFileUpload';
+import Conversation from './Components/Conversation';
 import React, { useState } from 'react';
 
 import {
@@ -42,13 +45,18 @@ function App() {
         <Alert />
         <div className="container">
           <Switch>
-            <Route path="/about">
+            {/* <Route path="/about">
               <About />
-            </Route>
+            </Route> */}
 
             <Route path="/">
+              {/* <AudioRecorder></AudioRecorder> */}
+              {/* <VoiceRecorder></VoiceRecorder> */}
               <AudioRecorder></AudioRecorder>
-              <VoiceRecorder></VoiceRecorder>
+
+              {/* <AudioFileUpload></AudioFileUpload> */}
+              {/* <GreetingForm></GreetingForm> */}
+              <Conversation></Conversation>
             </Route>
           </Switch>
         </div>

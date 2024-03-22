@@ -1,37 +1,51 @@
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+.audio-recorder-container {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.transcription-container {
+  margin-top: 20px;
+}
+
+.transcription-content {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.transcription-content p {
+  margin: 0;
+}
+
+/* Example animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  h2 {
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  .main-container {
-    border: 2px solid #333;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
-  .btn-style {
-    margin-top: 20px;
-  }
-  
-  .btn-style button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-style button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+.transcription-container {
+  animation: fadeIn 1s ease-in-out;
+}

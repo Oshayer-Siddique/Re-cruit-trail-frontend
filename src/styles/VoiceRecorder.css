@@ -1,12 +1,14 @@
-.recorder-container {
+.container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
   }
   
-  .recorder-container h2 {
-    color: #333;
+  .recorder-container {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
   }
   
   .recorder-controls {
