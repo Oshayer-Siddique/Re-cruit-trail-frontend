@@ -112,7 +112,7 @@ function AudioRecorder() {
       {summary && (
         <div>
           <h3>Summary</h3>
-          <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid #ccc', padding: '10px' }}>
+          <div style={{  overflowY: 'auto', border: '1px solid #ccc', padding: '10px',height : '400' }}>
             <pre>{summary}</pre>
           </div>
         </div>

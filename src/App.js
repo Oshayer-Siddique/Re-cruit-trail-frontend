@@ -9,6 +9,8 @@ import VoiceRecorder from './Components/VoiceRecorder';
 import GreetingForm from './Components/GreetingForm';
 import AudioFileUpload from './Components/AudioFileUpload';
 import Conversation from './Components/Conversation';
+import ConversationFile from './Components/ConversationFile';
+import TranscribeButton from './Components/TranscribeButton';
 import React, { useState } from 'react';
 
 import {
@@ -54,9 +56,13 @@ function App() {
               {/* <VoiceRecorder></VoiceRecorder> */}
               <AudioRecorder></AudioRecorder>
 
-              {/* <AudioFileUpload></AudioFileUpload> */}
+              
               {/* <GreetingForm></GreetingForm> */}
               <Conversation></Conversation>
+              <AudioFileUpload></AudioFileUpload>
+              <TranscribeButton></TranscribeButton>
+              <ConversationFile></ConversationFile>
+              
             </Route>
           </Switch>
         </div>
