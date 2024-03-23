@@ -6,7 +6,9 @@ function AudioRecorder() {
   const [isRecording, setIsRecording] = useState(false);
   const [audioBlob, setAudioBlob] = useState(null);
   const [transcription, setTranscription] = useState({ message: '', description: '' });
-  const [isLoading, setIsLoading] = useState(false); // State to track loading status
+  const [isLoading, setIsLoading] = useState(false);
+  const [summary, setSummary] = useState(null);
+  const [selectedFormat, setSelectedFormat] = useState(null);
   const mediaRecorder = useRef(null);
 
   const startRecording = () => {
@@ -42,8 +44,7 @@ function AudioRecorder() {
     const formData = new FormData();
     formData.append('audio', audioBlob, 'recorded_audio.wav');
 
-    // Set loading state to true when uploading starts
-    setIsLoading(true);
+    setIsLoading(true); // Set loading state when uploading starts
 
     axios.post('http://localhost:5000/transcribe', formData, {
       headers: {
@@ -53,15 +54,33 @@ function AudioRecorder() {
     .then(response => {
       console.log(response.data);
       setTranscription(response.data);
-      // Set loading state to false when transcription is received
-      setIsLoading(false);
+      setIsLoading(false); // Set loading state to false after transcription
     })
     .catch(error => {
       console.error('Error uploading file: ', error);
       alert('Error uploading file.');
-      // Set loading state to false on error
-      setIsLoading(false);
+      setIsLoading(false); // Set loading state to false on error
     });
+  };
+
+  const generateSummary = (format) => {
+    setIsLoading(true); // Set loading state when generating summary
+    axios.post('http://localhost:5000/summary', { conversation: transcription.description, summaryFormat: format })
+      .then(response => {
+        console.log(response.data);
+        setSummary(response.data.sentence);
+        setIsLoading(false); // Set loading state to false after summary is received
+      })
+      .catch(error => {
+        console.error('Error generating summary: ', error);
+        alert('Error generating summary.');
+        setIsLoading(false); // Set loading state to false on error
+      });
+  };
+
+  const handleFormatClick = (format) => {
+    setSelectedFormat(format);
+    generateSummary(format);
   };
 
   return (
@@ -75,16 +94,27 @@ function AudioRecorder() {
       {audioBlob && (
         <button onClick={handleUpload}>Transcribe Audio</button>
       )}
-      {transcription.message && (
+      {transcription.message && !isLoading && (
         <div>
           <h3>Audio Transcription</h3>
-          {isLoading ? ( // Show loading screen if isLoading is true
-            <p>Loading...</p>
-          ) : (
-            <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid #ccc', padding: '10px' }}>
-              <p>{transcription.description}</p>
-            </div>
-          )}
+          <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid #ccc', padding: '10px' }}>
+            <p>{transcription.description}</p>
+          </div>
+          <h3>Select Summary Format:</h3>
+          <div>
+            <button onClick={() => handleFormatClick('paragraphs')}>Paragraphs</button>
+            <button onClick={() => handleFormatClick('bulletPoints')}>Bullet Points</button>
+            <button onClick={() => handleFormatClick('timeline')}>Timeline</button>
+          </div>
+        </div>
+      )}
+      {isLoading && <p>Loading...</p>}
+      {summary && (
+        <div>
+          <h3>Summary</h3>
+          <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid #ccc', padding: '10px' }}>
+            <pre>{summary}</pre>
+          </div>
         </div>
       )}
     </div>
