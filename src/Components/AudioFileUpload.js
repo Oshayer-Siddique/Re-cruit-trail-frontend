@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/AudioFileUpload.css'
 
 function AudioFileUpload() {
   const [file, setFile] = useState(null);
@@ -41,7 +42,11 @@ function AudioFileUpload() {
   return (
     <div>
       <h2>Upload Audio File</h2>
-      <input type="file" accept="audio/*" onChange={handleFileChange} />
+      
+      <input type="file" accept="audio/*" onChange={handleFileChange} className="centered-input" />
+
+      <br />
+      <br />
       <button onClick={handleUpload}>Upload</button>
     </div>
   );

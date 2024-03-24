@@ -7,7 +7,7 @@
   
   /* Load Conversation button */
   button.load-button {
-    background-color: #4CAF50;
+    background-color: #8dda8f;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -18,7 +18,7 @@
   }
   
   button.load-button:hover {
-    background-color: #45a049;
+    background-color: #36da3e;
   }
   
   /* Conversation box */

@@ -23,7 +23,7 @@ function TranscribeButton() {
 
   return (
     <div>
-      <h2>Transcribe Audio and Get Text</h2>
+      <h2>Transcribe Audio and Get Conversion</h2>
       <button onClick={handleTranscribe} disabled={isLoading}>
         {isLoading ? 'Transcribing...' : 'Transcribe'}
       </button>

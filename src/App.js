@@ -30,11 +30,16 @@ function App() {
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark');
-      document.body.style.backgroundColor = '#0a335c';
+      //document.body.style.backgroundColor = '#0c2d57';
+      document.body.style.backgroundImage = 'url("./bg.jpg")';
+      document.body.style.backgroundSize = 'cover';
     }
     else {
       setMode('light');
-      document.body.style.backgroundColor = 'white';
+      document.body.style.backgroundColor = '#9fcbe8';
+      document.body.style.backgroundImage = 'url("./bg.jpg")';
+      document.body.style.backgroundSize = 'cover';
+      
     }
 
   }
@@ -42,9 +47,14 @@ function App() {
 
 
     <Router>
+
+
+
+
+
       <div>
-        <Navbar title="Momentum" about="ABOUT US" mode={mode} togglemode={toggleMode} />
-        <Alert />
+        <Navbar   mode={mode} togglemode={toggleMode} />
+        
         <div className="container">
           <Switch>
             {/* <Route path="/about">
@@ -67,6 +77,7 @@ function App() {
           </Switch>
         </div>
       </div>
+      
     </Router>
 
  

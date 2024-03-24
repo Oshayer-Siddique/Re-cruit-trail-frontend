@@ -1,5 +1,5 @@
 .audio-recorder-container {
-  background-color: #f7f7f7;
+  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Gradient background */
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 8px;
@@ -8,21 +8,23 @@
 }
 
 button {
-  background-color: #007bff;
+  background-color: #06374f; /* Green button color */
   color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
   margin-right: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049; /* Darker green on hover */
 }
 
 .transcription-container {
   margin-top: 20px;
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
 }
 
 .transcription-content {
@@ -30,6 +32,8 @@ button:hover {
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 10px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px;
 }
 
 .transcription-content p {
@@ -40,12 +44,10 @@ button:hover {
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(-20px); /* Optional: Add a slight upward movement */
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
-}
-
-.transcription-container {
-  animation: fadeIn 1s ease-in-out;
 }

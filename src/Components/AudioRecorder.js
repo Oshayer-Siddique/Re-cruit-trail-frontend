@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import '../styles/AudioRecorder.css';
+import microphone from'../microphone.svg'
 
 function AudioRecorder() {
   const [isRecording, setIsRecording] = useState(false);
@@ -85,7 +86,10 @@ function AudioRecorder() {
 
   return (
     <div>
-      <h2>Audio Recorder</h2>
+      <img src={microphone} alt="Microphone" width="24" height="24" style={{ marginRight: '8px' }} />
+      {/* <h2>Audio Recorder</h2> */}
+      <br />
+      <br />
       {!isRecording ? (
         <button onClick={startRecording}>Start Recording</button>
       ) : (

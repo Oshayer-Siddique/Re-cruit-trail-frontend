@@ -1,72 +1,27 @@
+/* App.css */
+
 .navbar {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .navbar-menu {
-    display: flex;
-  }
-  
-  .navbar-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Display items horizontally */
-  }
-  
-  .nav-item {
-    margin-left: 20px;
-  }
-  
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-toggle {
-    display: none;
-  }
-  
-  .navbar-toggle-label {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 10px;
-    }
-  
-    .navbar-menu.show {
-      display: flex;
-    }
-  
-    .navbar-toggle {
-      display: block;
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-    }
-  
-    .navbar-nav {
-      flex-direction: column;
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-      margin-left: 0;
-    }
-  }
-  
+  background-color: #f41738; /* Navbar background color */
+}
+
+.navbar-brand {
+  color: #f4e9e9; /* Navbar brand color */
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Navbar links color */
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffd700; /* Navbar links color on hover */
+}
+
+.custom-control-label {
+  color: #fff; /* Switch label color */
+}
+
+.custom-control-input:checked ~ .custom-control-label {
+  color: #ffd700; /* Switch label color when checked */
+}
