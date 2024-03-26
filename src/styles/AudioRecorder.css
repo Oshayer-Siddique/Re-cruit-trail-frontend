@@ -1,20 +1,28 @@
+/* AudioRecorder component styles */
 .audio-recorder-container {
-  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Gradient background */
+  background: linear-gradient(135deg, #eff3f4, #6a5acd); /* Gradient background */
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 8px;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 500px;
+  text-align: center; /* Center align content */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.audio-recorder-container img {
+  margin-right: 8px;
+  vertical-align: middle; /* Align the image vertically with the text */
 }
 
 button {
   background-color: #06374f; /* Green button color */
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
   border-radius: 4px;
-  margin-right: 10px;
+  margin: 8px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
@@ -32,22 +40,52 @@ button:hover {
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 10px;
-  background-color: #f9f9f9; /* Light gray background */
+  background-color: #ffffff; /* White background */
   border-radius: 8px;
+  margin-top: 10px;
 }
 
 .transcription-content p {
   margin: 0;
 }
 
-/* Example animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px); /* Optional: Add a slight upward movement */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.summary-container {
+  margin-top: 20px;
 }
+
+.summary-content {
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  margin-top: 10px;
+  max-height: 300px; /* Limit height for better responsiveness */
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite; /* Rotate spinner */
+}
+
+
+.summary-box {
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  margin-top: 10px;
+  max-height: 500px; /* Limit height for better responsiveness */
+}
+

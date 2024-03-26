@@ -85,43 +85,44 @@ function AudioRecorder() {
   };
 
   return (
-    <div>
-      <img src={microphone} alt="Microphone" width="24" height="24" style={{ marginRight: '8px' }} />
-      {/* <h2>Audio Recorder</h2> */}
-      <br />
-      <br />
-      {!isRecording ? (
-        <button onClick={startRecording}>Start Recording</button>
-      ) : (
-        <button onClick={stopRecording}>Stop Recording</button>
-      )}
-      {audioBlob && (
-        <button onClick={handleUpload}>Transcribe Audio</button>
-      )}
-      {transcription.message && !isLoading && (
-        <div>
-          <h3>Audio Transcription</h3>
-          <div style={{ maxHeight: '200px', overflowY: 'auto', border: '1px solid #ccc', padding: '10px' }}>
-            <p>{transcription.description}</p>
-          </div>
-          <h3>Select Summary Format:</h3>
-          <div>
-            <button onClick={() => handleFormatClick('paragraphs')}>Paragraphs</button>
-            <button onClick={() => handleFormatClick('bulletPoints')}>Bullet Points</button>
-            <button onClick={() => handleFormatClick('timeline')}>Timeline</button>
-          </div>
-        </div>
-      )}
-      {isLoading && <p>Loading...</p>}
-      {summary && (
-        <div>
-          <h3>Summary</h3>
-          <div style={{  overflowY: 'auto', border: '1px solid #ccc', padding: '10px',height : '400' }}>
-            <pre>{summary}</pre>
-          </div>
-        </div>
-      )}
+<div>
+  <img src={microphone} alt="Microphone" width="24" height="24" style={{ marginRight: '8px' }} />
+  <br />
+  <br />
+  {!isRecording ? (
+    <button onClick={startRecording}>Start Recording</button>
+  ) : (
+    <button onClick={stopRecording}>Stop Recording</button>
+  )}
+  {audioBlob && (
+    <button onClick={handleUpload}>Transcribe Audio</button>
+  )}
+  {transcription.message && !isLoading && (
+    <div className="transcription-container">
+      <h3>Audio Transcription</h3>
+      <div className="transcription-content">
+        <p>{transcription.description}</p>
+        {/* <button onClick={copyToClipboard}>Copy</button> Add copy button */}
+      </div>
+      <h3>Select Summary Format:</h3>
+      <div>
+        <button onClick={() => handleFormatClick('paragraphs')}>Paragraphs</button>
+        <button onClick={() => handleFormatClick('bulletPoints')}>Bullet Points</button>
+        <button onClick={() => handleFormatClick('timeline')}>Timeline</button>
+      </div>
     </div>
+  )}
+  {isLoading && <p>Loading...</p>}
+  {summary && (
+  <div>
+    <h3>Summary</h3>
+    <div className="summary-box">
+      <pre>{summary}</pre>
+    </div>
+  </div>
+)}
+
+</div>
   );
 }
 

@@ -1,0 +1,70 @@
+.transcribe-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .transcribe-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .transcribe-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .transcribe-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .transcribe-textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    width: calc(100% - 22px); /* Adjust for padding */
+    max-width: 100%;
+    overflow-y: auto;
+    border-radius: 8px;
+    resize: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .transcribe-textarea:focus {
+    outline: none;
+  }
+  
+  /* Loader styles */
+  .loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite; /* Rotate spinner */
+    margin-left: 10px;
+    display: inline-block;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
