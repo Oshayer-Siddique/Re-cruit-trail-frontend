@@ -24,7 +24,7 @@ function AudioFileUpload() {
     formData.append('file', renamedFile);
   
     axios
-      .post('https://re-cruit-trial-backend.onrender.com/upload', formData, {
+      .post('http://localhost:5000/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

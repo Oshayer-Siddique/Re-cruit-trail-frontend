@@ -7,7 +7,7 @@
   
   /* Load Conversation button */
   button.load-button {
-    background-color: #8dda8f;
+    background-color: #0404bfef;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -58,5 +58,20 @@
     margin: 0;
     color: #777;
     font-size: 14px;
+  }
+  
+
+  .highlight {
+    background-color: yellow; /* Change to desired highlight color */
+  }
+
+
+  .audio-playing {
+    color: red; /* Change to desired color */
+  }
+  
+
+  .transcription-content .highlight {
+    color: red; /* Change to desired highlight color */
   }
   
