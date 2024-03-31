@@ -21,11 +21,10 @@ const Conversation = () => {
   };
 
   return (
-    <div className="conversation-container">
-      <button onClick={fetchConversation} className="load-button">Conversation</button>
-      {loading && <p>Loading...</p>}
+    <div className=" pt-4">
+      <button disabled={loading} onClick={fetchConversation} className="load-button">{loading ? "Loading..." : "Generate Conversation"}</button>
       {conversationData && !loading && (
-        <div className="conversation-box">
+        <div className="border p-1 ">
           {conversationData.map((message, index) => (
             <div key={index} className="message">
               <p className="speaker"><strong>{message.speaker}</strong>:</p>
