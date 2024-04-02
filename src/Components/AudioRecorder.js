@@ -125,6 +125,15 @@ function AudioRecorder() {
             <button onClick={handleUpload}>Transcribe Audio</button>
           </div>
           <div></div>
+
+          <div className="py-4 flex justify-center items-center">
+          <audio
+            ref={audioPlayer}
+            controls
+            onEnded={handleAudioEnded}
+          />
+        </div>
+
           {audioBlob && (
             <>
               <img
@@ -177,13 +186,7 @@ function AudioRecorder() {
             </div>
           </div>
         )}
-        <div className="py-4 flex justify-center items-center">
-          <audio
-            ref={audioPlayer}
-            controls
-            onEnded={handleAudioEnded}
-          />
-        </div>
+        
       </div>
 
 
