@@ -40,7 +40,7 @@ function AudioFileUpload() {
   };
 
   return (
-    <div>
+    <div className='pt-8 text-center'>
       <h2>Upload Audio File</h2>
       
       <input type="file" accept="audio/*" onChange={handleFileChange} className="centered-input" />

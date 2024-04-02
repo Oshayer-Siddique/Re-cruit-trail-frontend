@@ -47,11 +47,6 @@ function App() {
 
 
     <Router>
-
-
-
-
-
       <div>
         <Navbar   mode={mode} togglemode={toggleMode} />
         
@@ -66,8 +61,6 @@ function App() {
               {/* <VoiceRecorder></VoiceRecorder> */}
               <AudioRecorder></AudioRecorder>
               {/* <GreetingForm></GreetingForm> */}
-              <AudioFileUpload></AudioFileUpload>
-              <TranscribeButton></TranscribeButton>
               <ConversationFile></ConversationFile>
               
             </Route>
