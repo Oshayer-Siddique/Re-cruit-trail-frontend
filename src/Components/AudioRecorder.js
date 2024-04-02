@@ -4,6 +4,8 @@ import "../styles/AudioRecorder.css";
 import microphone from "../microphone.svg";
 import playIcon from "../play.svg"; // Replace with your play icon
 import Conversation from "./Conversation";
+import AudioFileUpload from "./AudioFileUpload";
+import TranscribeButton from "./TranscribeButton";
 
 function AudioRecorder() {
   const [isRecording, setIsRecording] = useState(false);
@@ -113,8 +115,9 @@ function AudioRecorder() {
   return (
     <div className="grid grid-cols-2 gap-4">
       <div className="border-r px-2">
-        <div className="flex justify-between">
-          <div className="flex gap-4 justify-start items-center">
+        <AudioFileUpload />
+        <div className="flex justify-center items-center">
+          <div className="flex gap-4 justify-center items-center">
             <div>
               {!isRecording ? (
                 <button onClick={startRecording}>Start Recording</button>
@@ -124,15 +127,6 @@ function AudioRecorder() {
             </div>
             <button onClick={handleUpload}>Transcribe Audio</button>
           </div>
-          <div></div>
-
-          <div className="py-4 flex justify-center items-center">
-          <audio
-            ref={audioPlayer}
-            controls
-            onEnded={handleAudioEnded}
-          />
-        </div>
 
           {audioBlob && (
             <>
@@ -147,6 +141,12 @@ function AudioRecorder() {
             </>
           )}
         </div>
+        <TranscribeButton />
+        <Conversation/>
+      </div>
+
+      <div>
+        {isLoading && <p>Loading...</p>}
         {transcription.message && !isLoading && (
           <div className="transcription-container">
             <h3>Audio Transcription</h3>
@@ -173,11 +173,6 @@ function AudioRecorder() {
             </div>
           </div>
         )}
-        <Conversation/>
-      </div>
-
-      <div>
-        {isLoading && <p>Loading...</p>}
         {summary && (
           <div>
             <h3>Summary</h3>
