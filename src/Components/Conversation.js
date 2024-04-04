@@ -20,17 +20,46 @@ const Conversation = () => {
       });
   };
 
+  const handleSpeakerChange = (index, event) => {
+    const oldSpeaker = conversationData[index].speaker;
+    const newSpeaker = event.target.value;
+
+    // Create a new array with updated speakers
+    const updatedConversation = conversationData.map(message => {
+      if (message.speaker === oldSpeaker) {
+        return { ...message, speaker: newSpeaker };
+      } else {
+        return message;
+      }
+    });
+
+    setConversationData(updatedConversation);
+  };
+
   return (
     <div className="conversation-container">
+      <div className='conver-btn-container'>
       <button onClick={fetchConversation} className="load-button">Conversation</button>
+
+      </div>
+
+
       {loading && <p>Loading...</p>}
       {conversationData && !loading && (
         <div className="conversation-box">
           {conversationData.map((message, index) => (
-            <div key={index} className="message">
-              <p className="speaker"><strong>{message.speaker}</strong>:</p>
+            <div key={index} id={`message-${index}`} className="message">
+              <p className="timestamp">{message.timestamp}</p>
+              <p className="speaker">
+                <input
+                  type="text"
+                  value={message.speaker}
+                  onChange={(event) => handleSpeakerChange(index, event)}
+                  className="speaker-input"
+                />
+                :
+              </p>
               <p className="message-content">{message.message}</p>
-              <p className="timestamp">Timestamp: {message.timestamp}</p>
             </div>
           ))}
         </div>

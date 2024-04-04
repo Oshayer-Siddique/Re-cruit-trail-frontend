@@ -19,7 +19,7 @@ button {
   background-color: #06374f; /* Green button color */
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 2px 4px;
   cursor: pointer;
   border-radius: 4px;
   margin: 8px;
@@ -31,38 +31,84 @@ button:hover {
 }
 
 .transcription-container {
-  margin-top: 20px;
-  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+  margin-top: 38px;
+  animation: fadeIn 1s ease-in-out;
+  position: absolute;
+  right: 2%;
+  background-color: #f8f5f5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  padding: 20px;
+  max-height: 350px;
+  width: 40%;
+  height: 350px; /* Limit maximum width */
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
 .transcription-content {
+  max-width: 800px;
   max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 10px;
-  background-color: #ffffff; /* White background */
-  border-radius: 8px;
-  margin-top: 10px;
+  border: 1px solid #536c8e; /* Lighter border color */
+  padding: 1rem; /* Increased padding for better spacing */
+  background-color: #e7ecf2; /* Light gray background */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-top: 1rem; /* Increased margin-top for spacing */
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .transcription-content {
+    max-width: 100%; /* Adjust width to fit smaller screens */
+    max-height: 200px; /* Reduce max height for smaller screens */
+  }
 }
 
 .transcription-content p {
   margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 
-.summary-container {
-  margin-top: 20px;
+
+
+
+
+
+
+.summary-content pre {
+  font-size: 14px; /* Font size for the summary text */
+  font-family: 'Courier New', Courier, monospace; /* Use monospace font for better readability */
+  line-height: 1.5; /* Set line height for better spacing */
+  white-space: pre-wrap; /* Preserve line breaks */
+  word-wrap: break-word; /* Allow long words to break */
+  padding: 10px; /* Add padding to the text */
+  background-color: #f9f9f9; /* Light gray background color */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
 }
 
-.summary-content {
-  overflow-y: auto;
-  border: 1px solid #ccc;
+.recorder-container {
+  position: absolute;
+  left: 1%; /* Adjust left spacing as needed */
+  top: 15%; /* Adjust top spacing as needed */
+  border-radius: 1px;
   padding: 10px;
-  background-color: #ffffff; /* White background */
-  border-radius: 8px;
-  margin-top: 10px;
-  max-height: 300px; /* Limit height for better responsiveness */
+  
 }
-
 /* Loading animation */
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -79,13 +125,31 @@ button:hover {
 }
 
 
-.summary-box {
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  padding: 5px;
-  background-color: #ffffff; /* White background */
-  border-radius: 8px;
-  margin-top: 10px;
-  max-height: 500px; /* Limit height for better responsiveness */
+
+.trans-container{
+  position: absolute;
+  left: 1%; /* Adjust left spacing as needed */
+  top: 20%; /* Adjust top spacing as needed */
+  border-radius: 1px;
+  padding: 10px;
+  
+
 }
+
+
+.summary-box {
+  background-color: #edeaea; /* Light gray background color */
+  border: 1px solid #e0c3c3; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 1px; /* Padding around the content */
+  margin-top: 422px;
+  position: absolute;
+  right: 2%;
+  width: 40%;
+  max-height: 250px;
+  height: 250px;
+  
+   /* Spacing from the content above */
+}
+
 

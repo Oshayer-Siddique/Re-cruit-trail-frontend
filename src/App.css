@@ -41,3 +41,61 @@
 .blank{
   color: rgb(22, 22, 196);
 }
+
+
+.rectangle {
+  position: absolute;
+  margin-top: 4%;
+  right: 1.91%;
+  width: 40.1%; /* Adjust width as needed */
+  height: 405px; /* Adjust height as needed */
+  border-top: 2px solid #333; /* Adjust border properties as needed */
+  border-bottom: 2px solid #333; /* Adjust border properties as needed */
+  border-left: 2px solid #333; /* Adjust border properties as needed */
+  border-right: 2px solid #333;
+  border-radius: 5px; /* Adjust border properties as needed */
+}
+
+
+.rectangle1 {
+  position: absolute;
+  margin-top: 470px;
+  right: 1.91%;
+  width: 40.1%; /* Adjust width as needed */
+  height: 283px; /* Adjust height as needed */
+  border-top: 2px solid #333; /* Adjust border properties as needed */
+  border-bottom: 2px solid #333; /* Adjust border properties as needed */
+  border-left: 2px solid #333; /* Adjust border properties as needed */
+  border-right: 2px solid #333;
+  border-radius: 5px; /* Adjust border properties as needed */
+}
+
+
+.rectangle2 {
+  position: absolute;
+  margin-top: 860px;
+  right: 1.91%;
+  width: 40.1%; /* Adjust width as needed */
+  height: 355px; /* Adjust height as needed */
+  border-top: 2px solid #333; /* Adjust border properties as needed */
+  border-bottom: 2px solid #333; /* Adjust border properties as needed */
+  border-left: 2px solid #333; /* Adjust border properties as needed */
+  border-right: 2px solid #333; /* Adjust border properties as needed */
+}
+
+
+.rectangle3 {
+  position: absolute;
+  margin-top: 4%;
+  left: 15.8%;
+  width: 40.3%; /* Adjust width as needed */
+  height: 95%; /* Adjust height as needed */
+  border-top: 2px solid #333; /* Adjust border properties as needed */
+  border-bottom: 2px solid #333; /* Adjust border properties as needed */
+  border-left: 2px solid #333; /* Adjust border properties as needed */
+  border-right: 2px solid #333;
+  border-radius: 5px; /* Adjust border properties as needed */
+}
+
+
+

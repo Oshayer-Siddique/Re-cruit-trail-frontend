@@ -38,7 +38,11 @@ const ConversationFile = () => {
 
   return (
     <div className="conversation-container">
-      <button onClick={fetchConversation} className="load-button">Load Conversation</button>
+      <div className='upload-conbtn'>
+      <button onClick={fetchConversation} className="load-button">Conversation</button>
+
+      </div>
+
 
       {loading && <p>Loading...</p>}
       {conversationData && !loading && (

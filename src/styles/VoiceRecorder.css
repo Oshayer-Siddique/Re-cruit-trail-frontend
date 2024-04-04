@@ -1,4 +1,4 @@
-.container {
+/* .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -6,9 +6,9 @@
   }
   
   .recorder-container {
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+    border: 2px solid #e6d9d9;
+    border-radius: 4px;
+    padding: 0.1px;
   }
   
   .recorder-controls {
@@ -29,4 +29,4 @@
   .recorder-controls button:hover {
     background-color: #0056b3;
   }
-  
+   */

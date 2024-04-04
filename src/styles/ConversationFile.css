@@ -7,10 +7,10 @@
 
 /* Load Conversation button */
 button.load-button {
-  background-color: #0404bfef;
+  background-color: #06374f;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 2px 4px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -23,34 +23,61 @@ button.load-button:hover {
 
 /* Conversation box */
 .conversation-box {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd; /* Lighter border color */
+  border-radius: 8px; /* Rounded corners */
   padding: 10px;
-  margin-top: 20px;
-  max-height: 400px;
+  margin-top: 0px;
+  max-height: 90%;
   overflow-y: auto;
+  position: absolute;
+  width: 40%; /* Adjust width as needed */
+  left: 36%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.conversation-box::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.conversation-box::-webkit-scrollbar-thumb {
+  background-color: #bbb; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded scrollbar thumb */
+}
+
+.conversation-box::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar track color */
 }
 
 /* Message container */
 .message {
   background-color: #f9f9f9;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  margin-bottom: 0px;
+  border-radius: 1px;
+  box-shadow: 0 4px 8px 0 rgba(98, 21, 21, 0.1);
 }
 
 /* Speaker name */
 .speaker {
   margin: 0;
   font-weight: bold;
-  color: #333;
-  font-size: 18px;
+  color: #355e8a; /* Blue color */
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+ /* Choose a suitable font-family */
 }
+
 
 /* Message content */
 .message-content {
   margin: 10px 0;
-  font-size: 16px;
+  font-size: 14px;
+  color: #444; /* Dark gray color */
+  font-family: 'Courier New', Courier, monospace;
+ /* Choose a suitable font-family */
+  line-height: 1.5; /* Adjust line height for better readability */
 }
 
 /* Timestamp */
@@ -58,4 +85,12 @@ button.load-button:hover {
   margin: 0;
   color: #777;
   font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.upload-conbtn{
+  position: absolute;
+  left: 2%;
+  top: 370px;
+  
 }

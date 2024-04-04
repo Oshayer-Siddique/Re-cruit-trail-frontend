@@ -24,18 +24,29 @@ function TranscribeButton() {
   };
 
   return (
-    <div>
-      <h2>Transcribe Audio and Get Conversion</h2>
+    <div >
+
+      {/* <h2>Transcribe Audio and Get Conversion</h2> */}
+      <div className='upld-transcribe-btn'>
       <button onClick={handleTranscribe} disabled={isLoading}>
         {isLoading ? 'Transcribing...' : 'Transcribe'}
       </button>
+        
+      </div>
+      <div className='audo-head-container'>
+          
+      </div>
       {transcribedText && ( // Only render if transcribedText is not empty
-        <div style={{ marginTop: '20px', border: '1px solid #ccc', padding: '10px', height: '300px', overflowY: 'auto' }}>
+        <div className='upld-trans'>
+        <div className='text-cont'>
         <textarea
-          style={{ width: '100%', height: '100%', border: 'none', resize: 'none' }}
+          
           value={transcribedText}
           readOnly
         />
+
+        </div>
+
       </div>
       )}
     </div>

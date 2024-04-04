@@ -68,3 +68,59 @@
     }
   }
   
+
+.upld-transcribe-btn{
+  position: absolute;
+  left: 2.3%;
+  top: 45%;
+}
+
+.upld-trans{
+  background-color: #edeaea; /* Light gray background color */
+  border: 1px solid #e0c3c3; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 1px; /* Padding around the content */
+  margin-top: 620px;
+  position: absolute;
+  right: 2%;
+  width: 40%;
+  height: 300px;
+  
+}
+
+.audo-head-container{
+  position: absolute;
+  right: 12%;
+  margin-top: 455px;
+}
+
+
+.text-cont {
+  width: 100%;
+  max-width: 500px; /* Adjust as needed */
+  
+  
+}
+
+.text-cont textarea {
+  position: absolute;
+  right: 4%;
+  margin-top: 0px;
+  width: 90%;
+  height: 300px; /* Adjust as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+
+  font-size: 16px; /* Adjust as needed */
+  color: #333030;
+  resize: vertical; /* Allow vertical resizing */
+  overflow-y: auto; /* Add vertical scrollbar when needed */
+  
+}
+
+/* Optional: Add hover effect */
+.text-cont textarea:hover {
+  border-color: #999;
+}

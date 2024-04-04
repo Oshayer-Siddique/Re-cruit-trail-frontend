@@ -40,13 +40,8 @@ function AudioFileUpload() {
   };
 
   return (
-    <div>
-      <h2>Upload Audio File</h2>
-      
+    <div className='audio-upld-container'>
       <input type="file" accept="audio/*" onChange={handleFileChange} className="centered-input" />
-
-      <br />
-      <br />
       <button onClick={handleUpload}>Upload</button>
     </div>
   );

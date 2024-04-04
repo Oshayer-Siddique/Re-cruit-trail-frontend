@@ -20,9 +20,9 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             {/* Add other navigation links here if needed */}
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className={`nav-link ${textColor}`} to="/about">{props.about}</Link>
-            </li> */}
+            </li>
           </ul>
           <div className="form-inline my-2 my-lg-0">
             <div className="custom-control custom-switch mr-3">
@@ -40,8 +40,8 @@ const Navbar = (props) => {
 }
 
 Navbar.propTypes = {
-  // title: PropTypes.string.isRequired,
-  // about: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  about: PropTypes.string,
   mode: PropTypes.string.isRequired,
   togglemode: PropTypes.func.isRequired
 }

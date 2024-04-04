@@ -57,16 +57,32 @@ function App() {
         
         <div className="container">
           <Switch>
-            {/* <Route path="/about">
+            <Route path="/about">
               <About />
-            </Route> */}
+            </Route>
 
             <Route path="/">
+            <div class="rectangle">
+              <h5>Audio  Transcription</h5>
+            </div>
+
+            <div className='rectangle1'>
+              <h5>Summary</h5>
+
+            </div>
+
+            {/* <div className='rectangle2'>
+              <h5>AUdio transcribe of Uploaded file</h5>
+
+            </div> */}
+            <div className='rectangle3'>
+              <h5></h5>
+
+            </div>
+
               {/* <AudioRecorder></AudioRecorder> */}
               {/* <VoiceRecorder></VoiceRecorder> */}
               <AudioRecorder></AudioRecorder>
-
-              
               {/* <GreetingForm></GreetingForm> */}
               <Conversation></Conversation>
               <AudioFileUpload></AudioFileUpload>
