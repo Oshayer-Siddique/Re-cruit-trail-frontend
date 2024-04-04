@@ -55,7 +55,7 @@ function AudioRecorder() {
     setIsLoading(true); // Set loading state when uploading starts
 
     axios
-      .post("http://localhost:5000/transcribe", formData, {
+      .post("https://re-cruit-trial-backend.onrender.com/transcribe", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -75,7 +75,7 @@ function AudioRecorder() {
   const generateSummary = (format) => {
     setIsLoading(true); // Set loading state when generating summary
     axios
-      .post("http://localhost:5000/summary", {
+      .post("https://re-cruit-trial-backend.onrender.com/summary", {
         conversation: transcription.description,
         summaryFormat: format,
       })
@@ -182,7 +182,7 @@ function AudioRecorder() {
         )}
       </div>
   
-      <div>
+      <div >
         <audio
           ref={audioPlayer}
           controls

@@ -47,15 +47,10 @@ function App() {
 
 
     <Router>
-
-
-
-
-
       <div>
         <Navbar   mode={mode} togglemode={toggleMode} />
         
-        <div className="container">
+        <div>
           <Switch>
             <Route path="/about">
               <About />
@@ -84,9 +79,6 @@ function App() {
               {/* <VoiceRecorder></VoiceRecorder> */}
               <AudioRecorder></AudioRecorder>
               {/* <GreetingForm></GreetingForm> */}
-              <Conversation></Conversation>
-              <AudioFileUpload></AudioFileUpload>
-              <TranscribeButton></TranscribeButton>
               <ConversationFile></ConversationFile>
               
             </Route>
