@@ -46,7 +46,7 @@ const ConversationFile = () => {
 
       {loading && <p>Loading...</p>}
       {conversationData && !loading && (
-        <div className="conversation-box">
+        <div className="conversation-box1">
           {conversationData.map((message, index) => (
             <div key={index} id={`message-${index}`} className="message">
               <p className="timestamp">{message.timestamp}</p>

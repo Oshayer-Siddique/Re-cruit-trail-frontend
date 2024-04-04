@@ -71,8 +71,8 @@
 
 .upld-transcribe-btn{
   position: absolute;
-  left: 2.3%;
-  top: 45%;
+  right: 21%;
+  top: 17%;
 }
 
 .upld-trans{
@@ -80,11 +80,11 @@
   border: 1px solid #e0c3c3; /* Light gray border */
   border-radius: 5px; /* Rounded corners */
   padding: 1px; /* Padding around the content */
-  margin-top: 620px;
+  margin-top: 8.1% ;
   position: absolute;
   right: 2%;
-  width: 40%;
-  height: 300px;
+  width: 43.5%;
+  height: 74%;
   
 }
 
@@ -104,10 +104,10 @@
 
 .text-cont textarea {
   position: absolute;
-  right: 4%;
+  right: 2%;
   margin-top: 0px;
-  width: 90%;
-  height: 300px; /* Adjust as needed */
+  width: 96%;
+  height: 100%; /* Adjust as needed */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -122,5 +122,5 @@
 
 /* Optional: Add hover effect */
 .text-cont textarea:hover {
-  border-color: #999;
+  border-color: #cdcdcd;
 }

@@ -73,10 +73,10 @@
 
 .rectangle2 {
   position: absolute;
-  margin-top: 860px;
+  margin-top: 8%;
   right: 1.91%;
-  width: 40.1%; /* Adjust width as needed */
-  height: 355px; /* Adjust height as needed */
+  width: 44.1%; /* Adjust width as needed */
+  height: 75%; /* Adjust height as needed */
   border-top: 2px solid #333; /* Adjust border properties as needed */
   border-bottom: 2px solid #333; /* Adjust border properties as needed */
   border-left: 2px solid #333; /* Adjust border properties as needed */
@@ -99,3 +99,14 @@
 
 
 
+.rectangle4 {
+  position: absolute;
+  margin-top: 8%;
+  left: 3.91%;
+  width: 48%; /* Adjust width as needed */
+  height: 75%; /* Adjust height as needed */
+  border-top: 2px solid #333; /* Adjust border properties as needed */
+  border-bottom: 2px solid #333; /* Adjust border properties as needed */
+  border-left: 2px solid #333; /* Adjust border properties as needed */
+  border-right: 2px solid #333; /* Adjust border properties as needed */
+}

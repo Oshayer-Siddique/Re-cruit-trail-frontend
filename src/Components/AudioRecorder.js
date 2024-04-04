@@ -182,7 +182,7 @@ function AudioRecorder() {
         )}
       </div>
   
-      <div>
+      <div >
         <audio
           ref={audioPlayer}
           controls
