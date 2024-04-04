@@ -10,7 +10,7 @@ function GreetingForm() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:5000/', { name });
+      const response = await axios.post('https://re-cruit-trial-backend.onrender.com/', { name });
       setGreeting(response.data);
     } catch (error) {
       console.error('Error:', error);
