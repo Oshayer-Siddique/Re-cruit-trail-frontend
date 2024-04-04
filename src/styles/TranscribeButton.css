@@ -1,126 +1,126 @@
 .transcribe-container {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.transcribe-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.transcribe-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.transcribe-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.transcribe-textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  width: calc(100% - 22px); /* Adjust for padding */
+  max-width: 100%;
+  overflow-y: auto;
+  border-radius: 8px;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+.transcribe-textarea:focus {
+  outline: none;
+}
+
+/* Loader styles */
+.loader {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite; /* Rotate spinner */
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .transcribe-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  .transcribe-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-  }
-  
-  .transcribe-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  .transcribe-textarea {
-    border: 1px solid #ccc;
-    padding: 10px;
-    height: 300px;
-    width: calc(100% - 22px); /* Adjust for padding */
-    max-width: 100%;
-    overflow-y: auto;
-    border-radius: 8px;
-    resize: none;
-    font-family: Arial, sans-serif;
-  }
-  
-  .transcribe-textarea:focus {
-    outline: none;
-  }
-  
-  /* Loader styles */
-  .loader {
-    border: 6px solid #f3f3f3; /* Light grey */
-    border-top: 6px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    animation: spin 1s linear infinite; /* Rotate spinner */
-    margin-left: 10px;
-    display: inline-block;
-  }
-  
-  /* Fade-in animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+}
+
 
 .upld-transcribe-btn{
-  position: absolute;
-  left: 2.3%;
-  top: 45%;
+position: absolute;
+right: 21%;
+top: 17%;
 }
 
 .upld-trans{
-  background-color: #edeaea; /* Light gray background color */
-  border: 1px solid #e0c3c3; /* Light gray border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 1px; /* Padding around the content */
-  margin-top: 620px;
-  position: absolute;
-  right: 2%;
-  width: 40%;
-  height: 300px;
-  
+background-color: #edeaea; /* Light gray background color */
+border: 1px solid #e0c3c3; /* Light gray border */
+border-radius: 5px; /* Rounded corners */
+padding: 1px; /* Padding around the content */
+margin-top: 8.1% ;
+position: absolute;
+right: 2%;
+width: 43.5%;
+height: 74%;
+
 }
 
 .audo-head-container{
-  position: absolute;
-  right: 12%;
-  margin-top: 455px;
+position: absolute;
+right: 12%;
+margin-top: 455px;
 }
 
 
 .text-cont {
-  width: 100%;
-  max-width: 500px; /* Adjust as needed */
-  
-  
+width: 100%;
+max-width: 500px; /* Adjust as needed */
+
+
 }
 
 .text-cont textarea {
-  position: absolute;
-  right: 4%;
-  margin-top: 0px;
-  width: 90%;
-  height: 300px; /* Adjust as needed */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace;
+position: absolute;
+right: 2%;
+margin-top: 0px;
+width: 96%;
+height: 100%; /* Adjust as needed */
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-family: 'Courier New', Courier, monospace;
 
-  font-size: 16px; /* Adjust as needed */
-  color: #333030;
-  resize: vertical; /* Allow vertical resizing */
-  overflow-y: auto; /* Add vertical scrollbar when needed */
-  
+font-size: 16px; /* Adjust as needed */
+color: #333030;
+resize: vertical; /* Allow vertical resizing */
+overflow-y: auto; /* Add vertical scrollbar when needed */
+
 }
 
 /* Optional: Add hover effect */
 .text-cont textarea:hover {
-  border-color: #999;
+border-color: #cdcdcd;
 }

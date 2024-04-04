@@ -89,8 +89,25 @@ button.load-button:hover {
 
 }
 .upload-conbtn{
-  position: absolute;
-  left: 2%;
-  top: 370px;
   
+    position: absolute;
+    left: 21%;
+    top: 17%;
+  
+  
+}
+
+.conversation-box1 {
+  border: 1px solid #ddd; /* Lighter border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px;
+  margin-top: 7%;
+  max-height: 73%;
+  overflow-y: auto;
+  position: absolute;
+  width: 47%; /* Adjust width as needed */
+  left: 28%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
