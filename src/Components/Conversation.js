@@ -3,14 +3,15 @@ import React, { useState } from 'react';
 import '../styles/AudioRecorder.css';
 
 const Conversation = () => {
-  // const [conversationData, setConversationData] = useState(null);
-  // const [loading, setLoading] = useState(false);
-  const [conversationData, setConversationData] = useState([{timestamp:0, speaker: "Lorem", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."}, {timestamp:2, speaker: "Ipsum", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."},]);
+  const [conversationData, setConversationData] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  // const [conversationData, setConversationData] = useState([{timestamp:0, speaker: "Lorem", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."}, {timestamp:2, speaker: "Ipsum", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."},]);
+  // const [loading, setLoading] = useState(false);
 
   const fetchConversation = () => {
     setLoading(true);
-    fetch('https://re-cruit-trial-backend.onrender.com/conversation')
+    fetch('http://localhost:5000/conversation')
       .then(response => response.json())
       .then(data => {
         setConversationData(data.conversation);

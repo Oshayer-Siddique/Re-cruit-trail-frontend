@@ -41,13 +41,13 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/upload">
-              <AudioFileUpload></AudioFileUpload>
-              <TranscribeButton></TranscribeButton>
-              <ConversationFile></ConversationFile>
+              <AudioFileUpload/>
+              <TranscribeButton/>
+              <ConversationFile/>
             </Route>
 
             <Route path="/">
-              
+
               <AudioRecorder />
 
               <Conversation />

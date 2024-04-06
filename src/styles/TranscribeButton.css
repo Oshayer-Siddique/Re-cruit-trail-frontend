@@ -70,7 +70,7 @@
   
 
 .upld-transcribe-btn{
-  position: absolute;
+  /* position: absolute; */
   right: 21%;
   top: 17%;
 }
@@ -80,34 +80,34 @@
   border: 1px solid #e0c3c3; /* Light gray border */
   border-radius: 5px; /* Rounded corners */
   padding: 1px; /* Padding around the content */
-  margin-top: 8.1% ;
-  position: absolute;
+  margin-top: 10px ;
+  /* position: absolute; */
   right: 2%;
-  width: 43.5%;
+  width: 80;
   height: 74%;
   
 }
 
 .audo-head-container{
-  position: absolute;
+  /* position: absolute; */
   right: 12%;
   margin-top: 455px;
 }
 
-
+/* 
 .text-cont {
   width: 100%;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 500px; Adjust as needed
   
   
-}
+} */
 
 .text-cont textarea {
-  position: absolute;
+  /* position: absolute; */
   right: 2%;
   margin-top: 0px;
   width: 96%;
-  height: 100%; /* Adjust as needed */
+  height: 215px; /* Adjust as needed */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
