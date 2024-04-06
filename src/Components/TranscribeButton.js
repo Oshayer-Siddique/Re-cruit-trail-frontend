@@ -12,7 +12,7 @@ function TranscribeButton() {
   const handleTranscribe = () => {
     setIsLoading(true);
 
-    axios.post('http://localhost:5000/transcribefile', null, {
+    axios.post('https://re-cruit-trial-backend.onrender.com/transcribefile', null, {
       responseType: 'json' // Change responseType to 'json'
     })
     .then(response => {

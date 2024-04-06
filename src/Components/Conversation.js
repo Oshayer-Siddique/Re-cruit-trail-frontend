@@ -11,7 +11,7 @@ const Conversation = () => {
 
   const fetchConversation = () => {
     setLoading(true);
-    fetch('http://localhost:5000/conversation')
+    fetch('https://re-cruit-trial-backend.onrender.com/conversation')
       .then(response => response.json())
       .then(data => {
         setConversationData(data.conversation);
@@ -73,6 +73,5 @@ const Conversation = () => {
 };
 
 export default Conversation;
-
 
 

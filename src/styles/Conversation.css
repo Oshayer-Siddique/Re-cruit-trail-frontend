@@ -1,81 +1,81 @@
 
 .conversation-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 
-  }
-  
-  /* Load Conversation button */
-  button.load-button {
-    background-color: #0404bfef;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.load-button:hover {
-    background-color: #36da3e;
-  }
-  
-  /* Conversation box */
+}
 
-  
-  /* Message container */
-  .message {
-    background-color: #e0e0e0;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Speaker name */
-  .speaker {
-    margin: 0;
-    font-weight: bold;
-    color: #355e8a; /* Blue color */
-    font-size: 20px;
-    font-family: Arial, sans-serif; /* Choose a suitable font-family */
-  }
-  
-  
-  /* Message content */
-  .message-content {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-  
-  /* Timestamp */
-  .timestamp {
-    margin: 0;
-    color: #777;
-    font-size: 14px;
-  }
-  
+/* Load Conversation button */
+button.load-button {
+  background-color: #0404bfef;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
 
-  .highlight {
-    background-color: yellow; /* Change to desired highlight color */
-  }
+button.load-button:hover {
+  background-color: #36da3e;
+}
+
+/* Conversation box */
 
 
-  .audio-playing {
-    color: red; /* Change to desired color */
-  }
-  
+/* Message container */
+.message {
+  background-color: #e0e0e0;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
 
-  .transcription-content .highlight {
-    color: red; /* Change to desired highlight color */
-  }
-  
+/* Speaker name */
+.speaker {
+  margin: 0;
+  font-weight: bold;
+  color: #355e8a; /* Blue color */
+  font-size: 20px;
+  font-family: Arial, sans-serif; /* Choose a suitable font-family */
+}
 
-  .conver-btn-container{
-    position: absolute;
-    left: 2%;
-    margin-top: 4%;
 
-  }
+/* Message content */
+.message-content {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Timestamp */
+.timestamp {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+
+.highlight {
+  background-color: yellow; /* Change to desired highlight color */
+}
+
+
+.audio-playing {
+  color: red; /* Change to desired color */
+}
+
+
+.transcription-content .highlight {
+  color: red; /* Change to desired highlight color */
+}
+
+
+.conver-btn-container{
+  position: absolute;
+  left: 2%;
+  margin-top: 4%;
+
+}
