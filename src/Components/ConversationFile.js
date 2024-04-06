@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/ConversationFile.css';
+// import '../styles/ConversationFile.css';
 
 const ConversationFile = () => {
   const [conversationData, setConversationData] = useState(null);
