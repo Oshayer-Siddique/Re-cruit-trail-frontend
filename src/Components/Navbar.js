@@ -41,3 +41,4 @@ export default function Navbar(props) {
       title: PropTypes.string,
       about: PropTypes.string,
   }
+

@@ -41,32 +41,20 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/upload">
-              <div class="rectangle2"></div>
-              <div class="rectangle4"></div>
 
-              
-
-              <AudioFileUpload></AudioFileUpload>
-              <TranscribeButton></TranscribeButton>
-              <ConversationFile></ConversationFile>
+              <AudioFileUpload/>
+              <TranscribeButton/>
+              <ConversationFile/>
             </Route>
 
             <Route path="/">
-              <div class="rectangle">
-                <h5>Audio Transcription</h5>
-              </div>
 
-              <div className="rectangle1">
-                <h5>Summary</h5>
-              </div>
+              <AudioRecorder />
 
-              <div className="rectangle3">
-                <h5>Conversation</h5>
-              </div>
+              <Conversation />
 
-              <AudioRecorder></AudioRecorder>
 
-              <Conversation></Conversation>
+
             </Route>
           </Switch>
         </div>
@@ -76,3 +64,4 @@ function App() {
 }
 
 export default App;
+

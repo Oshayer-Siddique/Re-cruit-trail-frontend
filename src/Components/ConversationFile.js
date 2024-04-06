@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/ConversationFile.css';
+// import '../styles/ConversationFile.css';
 
 const ConversationFile = () => {
   const [conversationData, setConversationData] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  // const [conversationData, setConversationData] = useState([{timestamp:0, speaker: "Lorem", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."}, {timestamp:2, speaker: "Ipsum", message:"Donec at libero pellentesque, porta quam eu, elementum justo. Donec at convallis nisl, at dignissim justo. Maecenas ultricies in nulla non mattis. Cras fermentum odio nec sem dignissim, ac dapibus velit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec non porta neque, id ultricies libero. Nulla quis lectus nulla."},]);
 
   const fetchConversation = () => {
     setLoading(true);

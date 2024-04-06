@@ -7,6 +7,8 @@ function TranscribeButton() {
   const [isLoading, setIsLoading] = useState(false);
   const [transcribedText, setTranscribedText] = useState('');
 
+  // const [transcribedText, setTranscribedText] = useState('Df g byu yu biyb iyb iub g yib hb khbh jbh bl bln jkn kjg in jkb i');
+
   const handleTranscribe = () => {
     setIsLoading(true);
 
@@ -33,9 +35,9 @@ function TranscribeButton() {
       </button>
         
       </div>
-      <div className='audo-head-container'>
+      {/* <div className='audo-head-container'>
           
-      </div>
+      </div> */}
       {transcribedText && ( // Only render if transcribedText is not empty
         <div className='upld-trans'>
         <div className='text-cont'>
