@@ -42,6 +42,7 @@ function App() {
         <div className="container">
           <Switch>
             <Route path="/upload">
+
               <AudioFileUpload/>
               <TranscribeButton/>
               <ConversationFile/>
@@ -59,6 +60,7 @@ function App() {
 
 
 
+
             </Route>
           </Switch>
         </div>
@@ -68,3 +70,4 @@ function App() {
 }
 
 export default App;
+
