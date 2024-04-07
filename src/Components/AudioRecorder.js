@@ -15,21 +15,10 @@ function AudioRecorder() {
   const [summary, setSummary] = useState(null);
   const [selectedFormat, setSelectedFormat] = useState(null);
   const [isAudioPlaying, setIsAudioPlaying] = useState(false); // New state for audio playing status
+  const [command, setCommand] = useState(""); // State for command input
+  const [commandOutput, setCommandOutput] = useState(""); // State for command output
   const mediaRecorder = useRef(null);
   const audioPlayer = useRef(null);
-
-  // const [isRecording, setIsRecording] = useState(false);
-  // const [audioBlob, setAudioBlob] = useState(null);
-  // const [transcription, setTranscription] = useState({
-  //   message: "This is a test recording",
-  //   description: "Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32.",
-  // });
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [summary, setSummary] = useState("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam sit amet sem ultrices vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent ut lobortis turpis. Quisque tortor nulla, hendrerit nec lacus in, mollis bibendum dui. Praesent porttitor quam eu diam bibendum, quis sodales tellus varius. In consectetur vitae sapien a pellentesque. Donec at gravida augue, eget tempor nibh. Vestibulum at gravida tellus, sed cursus sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel quam sit amet sem ultrices vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent ut lobortis turpis. Quisque tortor nulla, hendrerit nec lacus in, mollis bibendum dui. Praesent porttitor quam eu diam bibendum, quis sodales tellus varius. In consectetur vitae sapien a pellentesque. Donec at gravida augue, eget tempor nibh. Vestibulum at gravida tellus, sed cursus sapien.");
-  // const [selectedFormat, setSelectedFormat] = useState("paragraphs");
-  // const [isAudioPlaying, setIsAudioPlaying] = useState(false); // New state for audio playing status
-  // const mediaRecorder = useRef(null);
-  // const audioPlayer = useRef(null);
 
   const startRecording = () => {
     navigator.mediaDevices
@@ -122,11 +111,25 @@ function AudioRecorder() {
     setIsAudioPlaying(false); // Set isAudioPlaying to false when audio ends
   };
 
+  const handleCommandSubmit = () => {
+    // Send conversation and command to backend
+    axios
+      .post("http://localhost:5000/customsummary", {
+        conversation: transcription.description,
+        command: command,
+      })
+      .then((response) => {
+        console.log(response.data.sentence);
+        setCommandOutput(response.data.sentence); // Set the command output in state
+      })
+      .catch((error) => {
+        console.error("Error sending command: ", error);
+        alert("Error sending command.");
+      });
+  };
+
   return (
     <div>
-
-
-
       <div className="recorder-container">
         {!isRecording ? (
           <button onClick={startRecording}>Start Recording</button>
@@ -135,28 +138,17 @@ function AudioRecorder() {
         )}
       </div>
       <div style={{ textAlign: "center" }}>
-        <audio
-          ref={audioPlayer}
-          controls
-          onEnded={handleAudioEnded}
-        // style={{ display: "none" }}
-        />
+        <audio ref={audioPlayer} controls onEnded={handleAudioEnded} />
       </div>
       {isLoading && <p>Loading...</p>}
       <div className="bipartition-grid">
-
         <div className="transcription-container">
           <h5>Transcription</h5>
           <div>
             <div className="trans-container">
               {audioBlob && (
                 <>
-                  <button
-
-                    onClick={handleUpload}
-                  >
-                    Transcribe Audio
-                  </button>
+                  <button onClick={handleUpload}>Transcribe Audio</button>
                   <img
                     src={playIcon}
                     alt="Play Audio"
@@ -168,50 +160,65 @@ function AudioRecorder() {
                 </>
               )}
             </div>
-            {transcription.message && !isLoading && (<>
-              <div
-                className={`transcription-content ${isAudioPlaying ? "audio-playing" : ""
+            {transcription.message && !isLoading && (
+              <>
+                <div
+                  className={`transcription-content ${
+                    isAudioPlaying ? "audio-playing" : ""
                   }`}
-              >
-                {/* Apply different class when audio is playing */}
-                <p className="text-sm">{transcription.description}</p>
-                {/* <button onClick={copyToClipboard}>Copy</button> Add copy button */}
-              </div>
-            </>
+                >
+                  <p className="text-sm">{transcription.description}</p>
+                </div>
+              </>
             )}
           </div>
         </div>
-
-
-
         <div className="summary-box">
           <h5>Summary</h5>
-          {transcription.message && !isLoading && (<>
-          <h6>Select Summary Format:</h6>
-          <div className="menu-bar">
-            <button onClick={() => handleFormatClick("paragraphs")}>
-              Paragraphs
-            </button>
-            <button onClick={() => handleFormatClick("bulletPoints")}>
-              Bullet Points
-            </button>
-            <button onClick={() => handleFormatClick("timeline")}>
-              Timeline
-            </button>
-          </div>
-          </>)}
+          {transcription.message && !isLoading && (
+            <>
+              <h6>Select Summary Format:</h6>
+              <div className="menu-bar">
+                <button onClick={() => handleFormatClick("paragraphs")}>
+                  Paragraphs
+                </button>
+                <button onClick={() => handleFormatClick("bulletPoints")}>
+                  Bullet Points
+                </button>
+                <button onClick={() => handleFormatClick("timeline")}>
+                  Timeline
+                </button>
+              </div>
+            </>
+          )}
           {summary && (
             <div className="summary-content">
               <pre className="text-sm">{summary}</pre>
             </div>
           )}
         </div>
+        {/* Input field for the command */}
+        <div className="command-container">
+          <input
+            type="text"
+            value={command}
+            onChange={(e) => setCommand(e.target.value)}
+            placeholder="Enter your command"
+            
+            
+          />
+          <button onClick={handleCommandSubmit}>Command</button>
+        </div>
+        {/* Display the command output */}
+        {commandOutput && (
+          <div className="command-output">
+            <h5>Command Output</h5>
+            <p>{commandOutput}</p>
+          </div>
+        )}
       </div>
-
     </div>
   );
-
-
 }
 
 export default AudioRecorder;

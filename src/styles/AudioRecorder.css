@@ -222,3 +222,8 @@ button:hover {
     grid-template-columns:auto auto;
   }
 }
+
+.command-output{
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+}

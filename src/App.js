@@ -12,6 +12,7 @@ import Conversation from "./Components/Conversation";
 import ConversationFile from "./Components/ConversationFile";
 import TranscribeButton from "./Components/TranscribeButton";
 import React, { useState } from "react";
+import SummaryForm from "./Components/SummaryForm";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -51,6 +52,11 @@ function App() {
               <AudioRecorder />
 
               <Conversation />
+
+              {/* <GreetingForm></GreetingForm> */}
+
+              {/* <SummaryForm /> */}
+
 
 
             </Route>
